@@ -18,3 +18,7 @@ I will be updating all of these to include comments to explain how everything wo
 - 10 - Looping with Collections
 - 11 - Functions
 - 12 - Closures
+- 13 - Functions and Closures
+- 14 - Structs
+- 15 - Classes
+- 16 - Property Types
