@@ -29,8 +29,10 @@ struct BankAccount {
     mutating func creditDeposit(_ amount: Double) -> Double {
         creditBalance -= amount
         print("$\(amount) has been successfully deducted from your account")
-        if creditBalance <= 0 {
-            print("You have no remaining balance to pay.")
+        if creditBalance < 0 {
+            print("You have overpaid the balance.")
+        } else if creditBalance == 0 {
+            print("You have no remaining balance")
         } else {
             print("You have $\(creditBalance) left to pay.")
         }
