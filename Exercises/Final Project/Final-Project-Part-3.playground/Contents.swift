@@ -165,16 +165,19 @@ repeat {
     case 1:
         virtualBankSystem.checkBalance(bankAccount: bankAccount)
     case 2:
-        
+        virtualBankSystem
+            .moneyTransfer(transferType: "Withdraw", transferAmount: transferAmount, bankAccount: &bankAccount)
     case 3:
-        
+        virtualBankSystem
+            .moneyTransfer(transferType: "Deposit", transferAmount: transferAmount, bankAccount: &bankAccount)
     case 4:
-        
+        virtualBankSystem.isOpened.toggle()
+        break
     default :
         print("Invalid option.")
     }
-}
+} while virtualBankSystem.isOpened
 
-let transferAmount = 500
+let transferAmount: Double = 500
 print("Transfer Amount: $\(transferAmount)")
 var bankAccount = BankAccount()
